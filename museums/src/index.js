@@ -3,13 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar';
-import Museums from './components/Museums';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar/>
-    <Museums/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
