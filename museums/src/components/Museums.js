@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import MusemuDetail from "./MusumDetail";
+var selectedMuseum = [];
 
 function Museums() {
   const [data, setData] = useState([]);
   const [render, setRender] = useState(true);
+
 
   useEffect(() => {
     fetch("https://back-museums-uniandes.herokuapp.com/api/museums")
@@ -14,15 +16,18 @@ function Museums() {
       });
   }, []);
 
-  function cardClicked(param) {
-      setRender(param)
-      MusemuDetail.changeRenderState(true)
+  function renderMuseums(museum) {
+      selectedMuseum=museum;
+      setRender(false)
   }
 
-  if (render === true) {
+  if(render === true) {
     return (
       <div>
         <div className="container">
+        <div className="row">
+            <p>Home &gt; Museos</p>
+        </div>
           <div className="row text-center">
             <h2>Museums</h2>
           </div>
@@ -32,7 +37,7 @@ function Museums() {
             {data.map((museum) => {
               return (
                 <div className=" col-1col-md-3 col-lg-3" key={museum.name}>
-                  <div className="card" onClick={cardClicked.bind(false)}>
+                  <div className="card" onClick={() => renderMuseums(museum)}>
                     <img
                       className="card-img-top"
                       src={museum.image}
@@ -51,5 +56,9 @@ function Museums() {
       </div>
     );
   }
+  else{
+    return(<MusemuDetail museum={selectedMuseum}/>)
+    }
 }
+
 export default Museums;

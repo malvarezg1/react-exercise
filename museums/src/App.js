@@ -9,7 +9,6 @@ function App() {
     <div>
     <Navbar/>
     <Museums/>
-    <MusemuDetail/>
     </div>
   )
   }
