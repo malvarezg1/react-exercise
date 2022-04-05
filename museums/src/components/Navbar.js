@@ -1,6 +1,6 @@
 function Navbar(){
     return(
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
                 <div className="col-lg-9">
                     <h1>Museos de arte moderno</h1>

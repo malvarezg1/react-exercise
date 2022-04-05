@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2{
+  background-color: lightgray;
+
+}
+
+.navbar{
+  background-color: lightgray;
+
+}
+
+#ImagenCard {
+  padding: 20px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#ImagenCard2{
+  padding: 30px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.row{
+  margin: 20px;
+}
+
+.card{
+  height: 100%;
+}
+
+.cadrContent{
+  margin-top: 10%;
+}

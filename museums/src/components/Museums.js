@@ -29,7 +29,8 @@ function Museums() {
             <p>Home &gt; Museos</p>
         </div>
           <div className="row text-center">
-            <h2>Museums</h2>
+            <h2>MUSEOS</h2>
+            <hr></hr>
           </div>
         </div>
         <div className="container">
@@ -38,7 +39,7 @@ function Museums() {
               return (
                 <div className=" col-1col-md-3 col-lg-3" key={museum.name}>
                   <div className="card" onClick={() => renderMuseums(museum)}>
-                    <img
+                    <img id = "ImagenCard"
                       className="card-img-top"
                       src={museum.image}
                       alt={museum.image}
